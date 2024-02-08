@@ -13,6 +13,7 @@ import { IoMusicalNoteOutline } from "react-icons/io5";
 import { TfiVideoClapper } from "react-icons/tfi";
 import { youtubeServices1, youtubeServices2 } from "../utils/constants";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 const youItems = [
   {
     title: "Your Channel",
@@ -126,12 +127,15 @@ const SideBar = () => {
   const showSidebar = useSelector((store) => store.sidebar.showSidebar);
   if (!showSidebar) return "";
   return (
-    <div className=" flex flex-col px-2 py-1 fixed left-0 w-56 hover:w-60  overflow-y-scroll scrollbar-none hover:scrollbar-thin h-screen mb-2 mx-2">
+    <div className="hidden md:flex flex-col px-2 py-1 fixed left-0 w-56 hover:w-60  overflow-y-scroll scrollbar-none hover:scrollbar-thin h-screen mb-2 mx-2">
       <div className=" flex flex-col border-b py-2 mb-1">
-        <div className="flex items-center gap-4 font-semibold bg-[#f2f2f2] py-1 px-2  rounded-lg my-[0.1rem] hover:bg-[#E6E6E6] duration-500 ease-linear">
-          <MdHomeFilled size={28} />
-          <p>Home</p>
-        </div>
+        <Link to="/">
+          {" "}
+          <div className="flex items-center gap-4 font-semibold bg-[#f2f2f2] py-1 px-2  rounded-lg my-[0.1rem] hover:bg-[#E6E6E6] duration-500 ease-linear">
+            <MdHomeFilled size={28} />
+            <p>Home</p>
+          </div>
+        </Link>
         <div className="flex items-center gap-4 py-1 px-2 my-[0.1rem] rounded-lg  hover:bg-[#f2f2f2] text-sm duration-500 ease-linear">
           <SiYoutubeshorts size={24} />
           <p>Shorts</p>

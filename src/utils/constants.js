@@ -47,17 +47,11 @@ export const btnList = [
   "Tamil",
   "Live",
   "History",
-  "News",
-  "Mantras",
   "Tarak",
-  "Pop",
-  "Science",
   "Yoga",
   "Gym",
   "Cricket",
   "IPL",
-  "Series",
-  "Thrillers",
-  "Punjabi",
-  "Desi",
 ];
+export const VIDEO_URL =
+  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&key=AIzaSyDwcrKs4KsjFQOfpFYUp2meIyZjmDtX-po";
